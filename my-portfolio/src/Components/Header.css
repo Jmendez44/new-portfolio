@@ -1,0 +1,31 @@
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 75vw;
+  height: 100%;
+  margin: auto;
+}
+
+.about {
+  display: flex;
+  width: 35vw;
+  border: 1px black solid;
+  height: 65vh;
+}
+
+.about-text{
+  display: flex;
+  flex-direction: column;
+  
+  
+}
+
+.about-buttons{
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+}
