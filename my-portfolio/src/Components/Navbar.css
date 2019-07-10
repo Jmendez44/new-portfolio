@@ -10,19 +10,20 @@
   width: 100vw;
   height: 7vh;
   justify-content: flex-end;
-  background: #F7CB15;
+  /* background: #F7CB15; */
   padding-right: 50px;
   font-size: 2em;
 }
 
 .navlinks {
   margin-right: 25px;
-  margin-top: 15px;
+  margin-top: 19px;
   cursor: pointer;
   
 }
 
 .links {
+  
   margin: 10px;
   
 }
