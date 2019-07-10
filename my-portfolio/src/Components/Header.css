@@ -2,18 +2,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
-  width: 75vw;
-  height: 100%;
+  width: auto;
+  height: 100vh;
   margin: auto;
+  background: #F7CB15;
 }
 
 .about {
   display: flex;
   width: 35vw;
-  border: 1px black solid;
+  /* border: 1px #241C15 solid; */
   height: 65vh;
+  color: #241C15;
 }
 
 .about-text{

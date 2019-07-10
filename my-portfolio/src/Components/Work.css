@@ -1,0 +1,7 @@
+.work-container {
+  display: flex;
+  height: 100vh;
+  width: auto;
+  background: #FFFF;
+  /* background: #F55D3E; */
+}
