@@ -14,6 +14,9 @@
   display: flex;
   width: 35vw;
   /* border: 1px #241C15 solid; */
+  
+  justify-content: center;
+  text-align: center;
   height: 65vh;
   color: #241C15;
 }
