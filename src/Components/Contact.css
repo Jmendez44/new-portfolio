@@ -10,6 +10,7 @@
 
 .contact-form {
   height: 100%;
+  width: 40%;
 }
 
 .form{
@@ -20,13 +21,26 @@
   height: 60%;
 }
 
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 100%;
+}
+
 .vault {
   height: 75%;
+  
 }
 
 .soc {
-  
-  height: 25%;
+  width: 30%;
+  margin: 0 auto;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  /* height: 20%; */
   list-style: none;
   text-align: center;
   display: flex;
@@ -41,8 +55,8 @@
 .soc a {
   display: inline-block;
   position: relative;
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
 }
 .soc svg {
   height: 100%;
@@ -63,19 +77,26 @@
 
 
 .github {
+  text-decoration: none;
   background: white;
   color: black;
   fill: black;
 }
 .github:hover {
-  background: #6441a5;
+  background: #76BED0;
   color: white;
   fill: white;
 }
 
+.linkedin {
+  text-decoration: none;
+  color: black;
+  fill: white;
+}
+
 .linkedin:hover {
-  color: #007BB6;
-  fill: #007BB6;
+  color: white;
+  fill: #76BED0;
 }
 
 
