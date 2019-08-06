@@ -15,7 +15,7 @@ class Contact extends Component {
           
           <div className="contact-form">
             <div className="form">
-              <form method="POST" data-netlify="true">
+              <form name="contact" method="POST" netlify>
                 <div className="field">
                   <input type="email" name="email" id="email" placeholder="Email"/>
                 </div>
