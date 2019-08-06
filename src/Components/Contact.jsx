@@ -37,10 +37,17 @@ class Contact extends Component {
 
           <div className="contact-form">
             <div className="form">
-              <form onSubmit={this.handleSubmit}>
+              <form
+                name="contact"
+                method="POST"
+                onSubmit={this.handleSubmit}
+                data-netlify-honeypot="bot-field"
+                data-netlify="true"
+              >
+                <input type="hidden" name="form-name" value="contact" />
                 <p>
                   <label>
-                    Your Name: 
+                    Your Name:
                     <input
                       type="text"
                       name="name"
@@ -51,7 +58,7 @@ class Contact extends Component {
                 </p>
                 <p>
                   <label>
-                    Your Email: 
+                    Your Email:
                     <input
                       type="email"
                       name="email"
@@ -62,7 +69,7 @@ class Contact extends Component {
                 </p>
                 <p>
                   <label>
-                    Message: 
+                    Message:
                     <textarea
                       name="message"
                       value={message}
