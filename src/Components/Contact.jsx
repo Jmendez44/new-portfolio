@@ -3,55 +3,76 @@ import "./Contact.css";
 import vaultBoy from "../Assets/5d363c53d3d80.png";
 import vaultBoy2 from "../Assets/output-onlinepngtools.png";
 
-// const encode = (data) => {
-//   return Object.keys(data)
-//       .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-//       .join("&");
-// }
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 
 class Contact extends Component {
-  state = {};
+  state = { name: "", email: "", message: "" };
 
-  // handleSubmit = e => {
-  //   fetch("/", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //     body: encode({ "form-name": "contact", ...this.state })
-  //   })
-  //     .then(() => alert("Success!"))
-  //     .catch(error => alert(error));
+  handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
 
-  //   e.preventDefault();
-  // };
+    e.preventDefault();
+  };
 
-  // handleChange = e => this.setState({ [e.target.name]: e.target.value });
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
   render() {
-    // const { name, email, message } = this.state;
+    const { name, email, message } = this.state;
     return (
       <>
         <div className="contact-container" id="contact">
           <div className="img-container">
             <img className="vault" src={vaultBoy2} alt="" />
           </div>
-          
+
           <div className="contact-form">
             <div className="form">
-              <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field" >
-                <div className="field">
-                  <input type="email" name="email"  placeholder="Email"/>
-                </div>
-                <div className="field">
-                  <textarea name="message" id="message" placeholder="Message" rows="7" ></textarea>
-                </div>
-                <div className="field">
-                  <div data-netlify-recaptcha="true"></div>
-                </div>
-                <div className="actions">
-                  <input type="submit" value="Send Message" className="submit"/>
-                </div>
-                  
-
+              <form onSubmit={this.handleSubmit}>
+                <p>
+                  <label>
+                    Your Name: 
+                    <input
+                      type="text"
+                      name="name"
+                      value={name}
+                      onChange={this.handleChange}
+                    />
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    Your Email: 
+                    <input
+                      type="email"
+                      name="email"
+                      value={email}
+                      onChange={this.handleChange}
+                    />
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    Message: 
+                    <textarea
+                      name="message"
+                      value={message}
+                      onChange={this.handleChange}
+                    />
+                  </label>
+                </p>
+                <p>
+                  <button type="submit">Send</button>
+                </p>
               </form>
             </div>
             <div class="soc">
