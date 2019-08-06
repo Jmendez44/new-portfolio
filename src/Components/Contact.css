@@ -1,15 +1,24 @@
 .contact-container {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
   height: 100vh;
   width: auto;
   background: #76BED0;
 }
 
+.vault {
+  height: 75%;
+}
+
 .soc {
-  margin-top: 30px;
-  display: block;
+  
+  height: 100%;
   list-style: none;
   text-align: center;
+  display: flex;
+  align-items: center;
 }
 .soc li {
   display: inline-block;

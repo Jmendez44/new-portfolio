@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./Contact.css";
+import vaultBoy from '../Assets/5d363c53d3d80.png';
+import vaultBoy2 from '../Assets/output-onlinepngtools.png';
 
 class Contact extends Component {
   state = {};
@@ -7,6 +9,9 @@ class Contact extends Component {
     return (
       <>
         <div className="contact-container" id="contact">
+          
+          <img className="vault" src={vaultBoy2} alt=""/>
+          
           <div class="soc">
             {/* <a href="#" class="icon codepen" title="CodePen">
               <svg viewBox="0 0 512 512">
