@@ -44,7 +44,7 @@ class Contact extends Component {
                 data-netlify-honeypot="bot-field"
                 data-netlify="true"
               >
-                <input type="hidden" name="form-name" value="contact" />
+                {/* <input type="hidden" name="form-name" value="contact" /> */}
                 <p>
                   <label>
                     Your Name:
