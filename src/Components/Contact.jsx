@@ -3,9 +3,31 @@ import "./Contact.css";
 import vaultBoy from "../Assets/5d363c53d3d80.png";
 import vaultBoy2 from "../Assets/output-onlinepngtools.png";
 
+const encode = (data) => {
+  return Object.keys(data)
+      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+      .join("&");
+}
+
 class Contact extends Component {
-  state = {};
+  state = { name: "", email: "", message: "" };
+
+  handleSubmit = e => {
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+
+    e.preventDefault();
+  };
+
+  handleChange = e => this.setState({ [e.target.name]: e.target.value });
+
   render() {
+    const { name, email, message } = this.state;
     return (
       <>
         <div className="contact-container" id="contact">
@@ -15,12 +37,12 @@ class Contact extends Component {
           
           <div className="contact-form">
             <div className="form">
-              <form name="contact" method="POST" netlify>
+              <form onSubmit={this.handleSubmit} >
                 <div className="field">
-                  <input type="email" name="email" id="email" placeholder="Email"/>
+                  <input type="email" name="email" value={email} onChange={this.handleChange} placeholder="Email"/>
                 </div>
                 <div className="field">
-                  <textarea name="message" id="message" placeholder="Message" rows="7"></textarea>
+                  <textarea name="message" id="message" placeholder="Message" rows="7" value={message} onChange={this.handleChange}></textarea>
                 </div>
                 <div className="field">
                   <div data-netlify-recaptcha="true"></div>
