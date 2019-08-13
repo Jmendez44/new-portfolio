@@ -12,8 +12,8 @@ class Header extends Component {
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam assumenda voluptatem quam, tempore sint excepturi recusandae ullam deleniti voluptates, accusantium suscipit cumque error inventore eveniet quod quae animi, dicta vitae.</p>
           </div>
           <div className="about about-buttons">
-            <div className="btn work-btn">Work</div>
-            <div className="btn contact-btn">Contact</div>
+            <canvas id="c" width="800" height="250"/>
+
           </div>
         </div>
       </>

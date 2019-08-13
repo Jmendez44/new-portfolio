@@ -45,48 +45,54 @@ class Contact extends Component {
                 data-netlify="true"
               >
                 {/* <input type="hidden" name="form-name" value="contact" /> */}
-                <p>
+                <p className="form-stuff">
                   <label>
-                    Your Name:
+                    Your Name
                     <input
-                      type="text"
+                      type="name"
                       name="name"
                       value={name}
                       onChange={this.handleChange}
+                      className="input-sizing"
                     />
                   </label>
                 </p>
-                <p>
+                <p className="form-stuff">
                   <label>
-                    Your Email:
+                    Your Email
                     <input
                       type="email"
                       name="email"
                       value={email}
                       onChange={this.handleChange}
+                      className="input-sizing"
                     />
                   </label>
                 </p>
-                <p>
+                <p className="form-stuff">
                   <label>
-                    Message:
+                    Message
                     <textarea
                       name="message"
                       value={message}
                       onChange={this.handleChange}
+                      className="input-sizing"
+                      rows="10"
                     />
                   </label>
                 </p>
-                <p>
-                  <button type="submit">Send</button>
+                <p className="btn-stuff">
+                  <button className="submit" type="submit">
+                    Send
+                  </button>
                 </p>
               </form>
             </div>
-            <div class="soc">
+            <div className="soc">
               <a
                 href="https://github.com/Jmendez44"
                 target="_blank"
-                class="icon github"
+                className="icon github"
                 title="GitHub"
               >
                 <svg viewBox="71 71 370 370">
@@ -98,7 +104,7 @@ class Contact extends Component {
               <a
                 href="https://www.linkedin.com/in/jenuel-mendez/"
                 target="_blank"
-                class="icon linkedin"
+                className="icon linkedin"
                 title="LinkedIn"
               >
                 <svg viewBox="0 0 512 512">

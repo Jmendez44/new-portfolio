@@ -10,6 +10,10 @@
   background: #F7CB15;
 }
 
+#c{
+  border: #241C15 solid 1px;
+}
+
 .about {
   display: flex;
   width: 35vw;
