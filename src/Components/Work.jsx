@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import WorkCards from './WorkCards';
 import './Work.css';
 
 class Work extends Component {
@@ -7,7 +8,7 @@ class Work extends Component {
     return ( 
       <>
         <div className="work-container" id="work">
-          
+          <WorkCards />
         </div>
       </>
      );
