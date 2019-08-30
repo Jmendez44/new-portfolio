@@ -8,6 +8,10 @@ class Navbar extends Component {
     return (
       <>
         <div className="Navbar">
+          <div className="name">
+            <h1>J.Mendez</h1>
+          </div>
+
           <div className="navlinks">
             <Link
               className="links"

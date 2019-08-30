@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { useSpring, animated } from "react-spring";
 import { Spring } from "react-spring/renderprops";
-import { interpolate } from "flubber" 
+import { interpolate } from "flubber";
 // import { TimingAnimation } from 'react-spring/dist/addons'
 import "./Header.css";
 
@@ -17,20 +17,19 @@ class Header extends Component {
     return (
       <>
         <div className="header-container" id="header">
+          {/* <img className="nyc" src={require("../Assets/NYC.jpg")} alt="nyc" /> */}
           <div className="about about-text">
-            <h1>Jay Mendez</h1>
+            
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam
-              assumenda voluptatem quam, tempore sint excepturi recusandae ullam
-              deleniti voluptates, accusantium suscipit cumque error inventore
-              eveniet quod quae animi, dicta vitae.
+              assumenda voluptatem quam
             </p>
           </div>
-          <div className="about about-buttons">
+          {/* <div className="about about-buttons"> */}
             {/* <canvas id="c" width="800" height="250"/> */}
             {/* <animated.h1 style={props}>hello</animated.h1> */}
-            <svg width="500" viewBox="0 0 23 23">
-              <g fill="transparent" stroke="black" strokeWidth="0.2">
+            {/* <svg width="500" viewBox="0 0 23 23">
+              <g fill="transparent" stroke="white" strokeWidth="0.2">
                 <Spring from={{ x: 100 }} to={{ x: 0 }}>
                   {props => (
                     <svg strokeDashoffset={props.x}>
@@ -39,8 +38,8 @@ class Header extends Component {
                   )}
                 </Spring>
               </g>
-            </svg>
-          </div>
+            </svg> */}
+          {/* </div> */}
         </div>
       </>
     );

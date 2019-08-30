@@ -3,8 +3,9 @@
    License: none (public domain)
 */
 
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700&display=swap'); */
 
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500|Playfair+Display&display=swap');
 
 
 html, body, div, span, applet, object, iframe,
@@ -34,7 +35,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
-  font-family: 'Work Sans', Arial, Helvetica, sans-serif;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
 }
 ol, ul {
 	list-style: none;

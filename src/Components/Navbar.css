@@ -1,24 +1,26 @@
 .navlinks > .active{
-  background: black;
+  border-bottom: black 1px solid;
   
   color: white;
 }
 
 .Navbar {
+  color: white;
   position: fixed;
   display: flex;
   width: 100vw;
   height: 7vh;
-  justify-content: flex-end;
+  justify-content: space-around;
+  align-items: center;
   /* background: #F7CB15; */
-  padding-right: 50px;
+  
   font-size: 2em;
   z-index: 504
 }
 
 .navlinks {
-  margin-right: 25px;
-  margin-top: 19px;
+  /* margin-right: 25px; */
+  /* margin-top: 19px; */
   cursor: pointer;
   
 }
